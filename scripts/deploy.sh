@@ -6,4 +6,4 @@ echo "--- START ---"
 echo $GITHUB_OUTPUT 
 echo "VORNAME=Hans" >> $GITHUB_OUTPUT
 echo "--- ENDE ---"
-exit 1
+exit 32
