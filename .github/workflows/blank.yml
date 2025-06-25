@@ -25,4 +25,5 @@ jobs:
         run: |
          echo: "Der Name war: ${{ steps.run_deploy.outputs.VORNAME }}"
          echo: "Der Name war: ${{ steps.run_deploy.outputs.vorname }}"
-         echo: "Der Name war: ${{ steps.run_deploy.outputs.GITHUB_OUTPUT }}"
+#        echo: "Der Name war: ${{ steps.run_deploy.outputs.GITHUB_OUTPUT }}"
+         echo: "Der Name war: ${{ steps.vars.outputs.GITHUB_OUTPUT }}"
