@@ -15,7 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - uses: actions/checkout@v4
-      - name: run_deploy 
+      - name: run_deploy
+        id: var_id_bsp 
         shell: bash
         run: |
          cd scripts
@@ -23,6 +24,5 @@ jobs:
          ./deploy.sh
       - name: auswerten
         run: |
-         echo: "Der Name war: ${{ steps.run_deploy.outputs.VORNAME }}"
-         echo: "Der Name war: ${{ steps.run_deploy.outputs.vorname }}"
-         echo: "Der Name war: ${{ steps.vars.outputs.GITHUB_OUTPUT }}"
+         echo: "Der Name war: ${{ steps.var_id_bsp.outputs.vorname }}"
+         echo: "Der Name war: ${{ steps.var_id_bsp.outputs.VORNAME }}"
